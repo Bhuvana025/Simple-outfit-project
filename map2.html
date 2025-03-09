@@ -1,0 +1,48 @@
+<!--usemap: is value starts with hashtag followed by the name of the image map and is used to create relationship between 
+the image and the image map
+Maptag: is used to create and image map and is linked to the image by using required name attribute
+Note: the name attribute must have the same value as the usemap attribute 
+Area tag: It defines the clickable area
+Shape attribute: You must define the shae of the clickable area and u can choose one of these values 
+rect defines a rectangular region
+Circle defines circular region
+Poly defines a polygonal region
+Default defines a entire region
+You must also defines some coordinates to be able to place the clickable area on to the image
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Mapping</title>
+    <style>
+       h2{
+        color: rgb(230, 217, 77);
+       } 
+       .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       }
+       .image-container{
+        border: 5px solid #ddd;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0, 1);
+       }
+    </style>
+</head>
+<body>
+    <h2>Shopping Product Showcase</h2>
+    <div class="container">
+    <div class="image-container"></div>
+    <p style="font-style: oblique; font-size: 2rem;  text-align: center;   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  color: rgb(41, 36, 40);">
+        Click on the image objects which is present in the picture
+    <br>To navigate on other pages</p>
+    <img src="outfit.jpg"  usemap="#shoppingmap" width="450" height="360" alt="Outfit Image">
+</div>
+    <map name="shoppingmap">
+        <area shape="rect" coords="150,50,350,200" href="sweater.html" alt="Sweater">
+        <area shape="rect" coords="80,180,270,350" href="pant.html" alt="Pant">
+        <area shape="rect" coords="280,270,400,350" href="shoes.html" alt="Shoes" title="Shoes" target="_blank">
+        <area shape="rect" coords="320,180,430,270" href="bag.html" alt="Bag" title="Bag" target="_blank">
+    </map>
+</body>
+</html>
